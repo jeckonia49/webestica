@@ -1,0 +1,87 @@
+<html lang="en">
+  {% load static %}
+  <!---->
+  {% include "head.html" %} {% block css %}
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static 'assets/vendor/apexcharts/css/apexcharts.css' %}"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static 'assets/vendor/overlay-scrollbar/css/OverlayScrollbars.min.css' %}"
+  />
+  {% endblock css %}
+  <!---->
+  <body>
+    <!-- =======================
+Header START -->
+    {% include "dashboard/common/header.html" %}
+    <!-- =======================
+Header END -->
+
+    <!-- **************** MAIN CONTENT START **************** -->
+    <main>
+      <section class="pb-4">
+        <div class="container">
+          <div class="row g-4">{% block content %}{% endblock content %}</div>
+        </div>
+      </section>
+    </main>
+    <!-- **************** MAIN CONTENT END **************** -->
+    <!-- Back to top -->
+    <div class="back-top"><i class="bi bi-arrow-up-short"></i></div>
+
+    <!-- =======================
+Footer START -->
+    <footer class="mb-3">
+      <div class="container">
+        <div class="card card-body">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-lg-6">
+              <!-- Copyright -->
+              <div class="text-center text-lg-start">
+                ©2023
+                <a href="" class="text-reset btn-link" target="_blank"
+                  >Webestica</a
+                >. All rights reserved
+              </div>
+            </div>
+            <div
+              class="col-lg-6 d-sm-flex align-items-center justify-content-center justify-content-lg-end"
+            >
+              <!-- Links -->
+              <ul
+                class="nav text-center text-sm-end justify-content-center justify-content-center mt-3 mt-md-0"
+              >
+                <li class="nav-item"><a class="nav-link" href="#">Terms</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Privacy</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pe-0" href="#">Cookies</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- =======================
+Footer END -->
+    <!-- =======================
+JS libraries, plugins and custom scripts -->
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Vendors -->
+    <script src="{% static 'assets/vendor/apexcharts/js/apexcharts.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/overlay-scrollbar/js/OverlayScrollbars.min.js' %}"></script>
+
+    <!-- Template Functions -->
+    <script src="{% static 'assets/js/functions.js' %}"></script>
+  </body>
+</html>

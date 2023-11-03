@@ -1,0 +1,79 @@
+{% extends "base.html" %} {% load static %}
+<!---->
+{% block title %}{{ block.super }} Home {% endblock title %}
+<!---->
+{% block content %}
+
+<!-- =======================
+        Main hero START -->
+{% include "home/hero.html" %}
+<!-- =======================
+    Main hero END -->
+
+<!-- =======================
+        Feature News slider START -->
+{% include "home/news_slider.html" %}
+
+<!-- =======================
+Feature News slider END -->
+
+<!-- =======================
+Adv START -->
+<section class="p-0">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <a href="#" class="d-block card-img-flash">
+          <img src="{% static 'assets/images/adv-3.png' %}" alt="" />
+        </a>
+        <small class="text-end d-block mt-1">Advertisement</small>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- =======================
+Adv END -->
+<!-- =======================
+Main content START -->
+{% include "home/top.html" %}
+<!-- =======================
+Main content END -->
+
+<!-- =======================
+Tab post START -->
+{% include "home/tab.html" %}
+<!-- =======================
+Tab post END -->
+<!-- =======================
+Section START -->
+{% include "home/sponsored.html" %}
+<!-- =======================
+Section END -->
+<!-- =======================
+Main content 2 START -->
+{% include "home/podcast.html" %}
+<!-- =======================
+Main content 2 END -->
+<!-- =======================
+Today's top highlight END -->
+
+<!-- =======================
+Ads START -->
+<section class="pt-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <a href="#" class="card-img-flash d-block">
+          <img src="{% static 'assets/images/adv-1.png' %}" alt="adv" />
+        </a>
+        <!-- Link text -->
+        <div class="smaller text-end mt-2">
+          ads via <a href="#" class="text-body"><u>Bootstrap</u></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- =======================
+Ads END -->
+{% endblock content %}

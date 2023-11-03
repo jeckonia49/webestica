@@ -1,0 +1,223 @@
+{% extends "dashboard/base.html" %} {% load static %}
+<!---->
+{% block title %}Profile{% endblock title %}
+<!---->
+
+{% block content %}
+
+<div class="col-lg-8">
+  <!-- Chart START -->
+  <div class="card border h-100">
+    <!-- Card header -->
+    <div
+      class="card-header border-bottom d-flex justify-content-between align-items-center p-3"
+    >
+      <h5 class="card-header-title mb-0">About author</h5>
+      <a href="#" class="btn btn-sm btn-primary mb-0">Edit Profile</a>
+    </div>
+
+    <!-- Card body -->
+    <div class="card-body">
+      <div class="d-sm-flex justify-content-sm-between align-items-center mb-4">
+        <!-- Avatar detail -->
+        <div class="d-flex align-items-center">
+          <!-- Avatar -->
+          <div class="avatar avatar-lg">
+            <img
+              class="avatar-img rounded-circle border border-white border-3 shadow"
+              src="{% static 'assets/images/avatar/03.jpg' %}"
+              alt=""
+            />
+          </div>
+          <!-- Info -->
+          <div class="ms-3">
+            <h5 class="mb-0">Larry Lawson</h5>
+            <p class="mb-0 small">Editor at Blogzine</p>
+          </div>
+        </div>
+        <!-- Tags -->
+        <div class="d-flex mt-2 mt-sm-0">
+          <h6 class="bg-danger py-2 px-3 text-white rounded">14K Follow</h6>
+          <h6 class="bg-info py-2 px-3 text-white rounded ms-2">856 Posts</h6>
+        </div>
+      </div>
+
+      <!-- Information START -->
+      <div class="row">
+        <!-- Information item -->
+        <div class="col-md-6">
+          <ul class="list-group list-group-borderless">
+            <!-- Title -->
+            <li class="list-group-item">
+              <span>Title:</span>
+              <span class="h6 mb-0">Mr.</span>
+            </li>
+            <!-- Full Name -->
+            <li class="list-group-item">
+              <span>Full Name:</span>
+              <span class="h6 mb-0">Larry Lawson</span>
+            </li>
+            <!-- User Name -->
+            <li class="list-group-item">
+              <span>User Name:</span>
+              <span class="h6 mb-0">Larrlaew</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Information item -->
+        <div class="col-md-6">
+          <ul class="list-group list-group-borderless">
+            <!-- Email ID -->
+            <li class="list-group-item">
+              <span>Email ID:</span>
+              <span class="h6 mb-0">example@gmail.com</span>
+            </li>
+            <!-- Mobile Number -->
+            <li class="list-group-item">
+              <span>Mobile Number:</span>
+              <span class="h6 mb-0">+123 456 789 10</span>
+            </li>
+            <!-- Joining Date -->
+            <li class="list-group-item">
+              <span>Joining Date:</span>
+              <span class="h6 mb-0">29 Aug 2022</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Information item -->
+        <div class="col-12">
+          <ul class="list-group list-group-borderless">
+            <!-- Description -->
+            <li class="list-group-item">
+              <span>Description:</span>
+              <p class="h6 mb-0">
+                As it so contrasted oh estimating instrument. Size like body
+                someone had. Are conduct viewing boy minutes warrant the expense
+                Tolerably behavior may admit daughters offending her ask own.
+                Praise effect wishes change way and any wanted. Lively use
+                looked latter regard had. Do he it part more last in Conduct
+                viewing boy minutes warrant the expense Tolerably behavior may
+                admit daughters offending her ask own. Praise effect wishes
+                change way and any wanted. Lively use looked latter regard had.
+                Do he it part more last in.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Information END -->
+    </div>
+  </div>
+  <!-- Chart END -->
+</div>
+
+<div class="col-md-6 col-lg-4">
+  <!-- Popular blog START -->
+  <div class="card border h-100">
+    <!-- Card header -->
+    <div class="card-header border-bottom p-3">
+      <h5 class="card-header-title mb-0">Popular blog this month</h5>
+    </div>
+
+    <!-- Card body START -->
+    <div class="card-body p-3">
+      <div class="row">
+        <!-- Blog item -->
+        <div class="col-12">
+          <div class="d-flex align-items-center position-relative">
+            <img
+              class="w-60 rounded"
+              src="{% static 'assets/images/blog/1by1/01.jpg' %}"
+              alt="product"
+            />
+            <div class="ms-3">
+              <a href="#" class="h6 stretched-link"
+                >Dirty little secrets about the business industry</a
+              >
+              <p class="small mb-0">
+                <i class="far fa-eye me-1"></i> 2344 Views
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <hr class="my-3" />
+
+        <!-- Blog item -->
+        <div class="col-12">
+          <div class="d-flex align-items-center position-relative">
+            <img
+              class="w-60 rounded"
+              src="{% static 'assets/images/blog/1by1/02.jpg' %}"
+              alt="product"
+            />
+            <div class="ms-3">
+              <a href="#" class="h6 stretched-link"
+                >12 worst types of business accounts you follow on Twitter</a
+              >
+              <p class="small mb-0">
+                <i class="far fa-eye me-1"></i> 4586 Views
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <hr class="my-3" />
+
+        <!-- Blog item -->
+        <div class="col-12">
+          <div class="d-flex align-items-center position-relative">
+            <img
+              class="w-60 rounded"
+              src="{% static 'assets/images/blog/1by1/03.jpg' %}"
+              alt="product"
+            />
+            <div class="ms-3">
+              <a href="#" class="h6 stretched-link"
+                >Bad habits that people in the industry need to quit</a
+              >
+              <p class="small mb-0">
+                <i class="far fa-eye me-1"></i> 3456 Views
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <hr class="my-3" />
+
+        <!-- Blog item -->
+        <div class="col-12">
+          <div class="d-flex align-items-center position-relative">
+            <img
+              class="w-60 rounded"
+              src="{% static 'assets/images/blog/1by1/04.jpg' %}"
+              alt="product"
+            />
+            <div class="ms-3">
+              <a href="#" class="h6 stretched-link"
+                >7 common mistakes everyone makes while traveling</a
+              >
+              <p class="small mb-0">
+                <i class="far fa-eye me-1"></i> 6586 Views
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card body END -->
+
+    <!-- Card footer -->
+    <div class="card-footer border-top text-center p-3">
+      <a href="#">View all Posts</a>
+    </div>
+  </div>
+  <!-- Popular blog END -->
+</div>
+
+{% endblock content %}

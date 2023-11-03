@@ -1,0 +1,453 @@
+{% extends "dashboard/base.html" %} {% load static %}
+<!---->
+{% block title %} {{ block.super }} Reviews {% endblock title %}
+<!---->
+{% block content %}
+
+<div class="col-12">
+  <!-- Title -->
+  <div class="d-sm-flex justify-content-sm-between align-items-center">
+    <h1 class="mb-2 mb-sm-0 h2">
+      Reviews
+      <span class="badge bg-primary bg-opacity-10 text-primary">301</span>
+    </h1>
+  </div>
+</div>
+
+<!---->
+<div class="col-12">
+  <!-- Blog list table START -->
+  <div class="card border bg-transparent rounded-3">
+    <!-- Card body START -->
+    <div class="card-body py-3">
+      <!-- Blog list table START -->
+      <div class="table-responsive border-0">
+        <table class="table p-4 mb-0 table-shrink">
+          <!-- Table head -->
+          <thead class="table-dark">
+            <tr>
+              <th scope="col" class="border-0 rounded-start">Blog Name</th>
+              <th scope="col" class="border-0">Reviewer</th>
+              <th scope="col" class="border-0">Rating</th>
+              <th scope="col" class="border-0">Hide/Show</th>
+              <th scope="col" class="border-0 rounded-end">Action</th>
+            </tr>
+          </thead>
+          <!-- Table body START -->
+          <tbody class="border-top-0">
+            <!-- Table item -->
+            <tr>
+              <!-- Table data -->
+              <td>
+                <h6 class="course-title mb-0">
+                  <a href="#">Five intermediate guide to business</a>
+                </h6>
+              </td>
+              <!-- Table data -->
+              <td>by Lori Stevens</td>
+              <!-- Table data -->
+              <td>
+                <ul class="list-inline mb-2">
+                  <li class="list-inline-item me-0 small">
+                    <i class="fas fa-star text-warning"></i>
+                  </li>
+                  <li class="list-inline-item me-0 small">
+                    <i class="fas fa-star text-warning"></i>
+                  </li>
+                  <li class="list-inline-item me-0 small">
+                    <i class="fas fa-star text-warning"></i>
+                  </li>
+                  <li class="list-inline-item me-0 small">
+                    <i class="fas fa-star text-warning"></i>
+                  </li>
+                  <li class="list-inline-item me-0 small">
+                    <i class="fas fa-star text-warning"></i>
+                  </li>
+                </ul>
+                <p class="small course-title">
+                  Our side fail find like now Discovered travelling for
+                  insensible partiality unpleasing impossible she Sudden up my
+                  excuse to suffer ladies though or Bachelor possible marianne
+                  directly confined relation as on he
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#viewReview"
+                  >
+                    Read more</a
+                  >
+                </p>
+              </td>
+              <!-- Table data -->
+              <td>
+                <div class="form-check form-switch form-check-md">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="checkReview1"
+                  />
+                </div>
+              </td>
+              <!-- Table data -->
+              <td>
+                <div class="dropdown">
+                  <a
+                    href="#"
+                    class="btn btn-light btn-round mb-0"
+                    role="button"
+                    id="dropdownReview"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-three-dots fa-fw"></i>
+                  </a>
+                  <!-- dropdown button -->
+                  <ul
+                    class="dropdown-menu dropdown-w-sm dropdown-menu-end min-w-auto shadow rounded"
+                    aria-labelledby="dropdownReview"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-pencil-square fa-fw me-2"></i>Edit</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-trash fa-fw me-2"></i>Delete</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+          <!-- Table body END -->
+        </table>
+      </div>
+      <!-- Blog list table END -->
+
+      <!-- Pagination START -->
+      <div
+        class="d-sm-flex justify-content-sm-between align-items-sm-center mt-4 mt-sm-3"
+      >
+        <!-- Content -->
+        <p class="mb-sm-0 text-center text-sm-start">
+          Showing 1 to 8 of 20 entries
+        </p>
+        <!-- Pagination -->
+        {% include "pagination.html" %}
+      </div>
+      <!-- Pagination END -->
+    </div>
+  </div>
+  <!-- Blog list table END -->
+</div>
+<div class="col-lg-6">
+  <!-- Top rated post START -->
+  <div class="card border bg-transparent rounded-3">
+    <!-- Card header START -->
+    <div class="card-header bg-transparent border-bottom py-3">
+      <h5 class="mb-2 mb-sm-0">Top rated post</h5>
+    </div>
+    <!-- Card header END -->
+
+    <!-- Card body START -->
+    <div class="card-body py-3">
+      <!-- Blog list table START -->
+      <div class="table-responsive border-0">
+        <table class="table align-middle p-4 mb-0 table-shrink">
+          <!-- Table head -->
+          <thead class="table-dark">
+            <tr>
+              <th scope="col" class="border-0 rounded-start">Blog Name</th>
+              <th scope="col" class="border-0">Rating</th>
+              <th scope="col" class="border-0 rounded-end">Action</th>
+            </tr>
+          </thead>
+
+          <!-- Table body START -->
+          <tbody class="border-top-0">
+            <!-- Table item -->
+            <tr>
+              <!-- Table data -->
+              <td>
+                <h6 class="course-title mb-0">
+                  <a href="#">Five intermediate guide to business</a>
+                </h6>
+              </td>
+              <!-- Table data -->
+              <td>
+                <ul class="list-inline d-flex mb-0">
+                  <li class="list-inline-item me-1 small">
+                    <i class="fas fa-star text-warning"></i>
+                  </li>
+                  <li class="list-inline-item me-1 small">
+                    <i class="fas fa-star text-warning"></i>
+                  </li>
+                  <li class="list-inline-item me-1 small">
+                    <i class="fas fa-star text-warning"></i>
+                  </li>
+                  <li class="list-inline-item me-1 small">
+                    <i class="fas fa-star text-warning"></i>
+                  </li>
+                  <li class="list-inline-item me-1 small">
+                    <i class="fas fa-star text-warning"></i>
+                  </li>
+                </ul>
+              </td>
+              <!-- Table data -->
+              <td>
+                <div class="dropdown">
+                  <a
+                    href="#"
+                    class="btn btn-light btn-round mb-0"
+                    role="button"
+                    id="dropdownReview6"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-three-dots fa-fw"></i>
+                  </a>
+                  <!-- dropdown button -->
+                  <ul
+                    class="dropdown-menu dropdown-w-sm dropdown-menu-end min-w-auto shadow rounded"
+                    aria-labelledby="dropdownReview6"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-pencil-square fa-fw me-2"></i>Edit</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-trash fa-fw me-2"></i>Delete</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+          <!-- Table body END -->
+        </table>
+      </div>
+      <!-- Top rated post END -->
+
+      <!-- Pagination START -->
+      <div
+        class="d-sm-flex justify-content-sm-between align-items-sm-center mt-4 mt-sm-3"
+      >
+        <!-- Content -->
+        <p class="mb-sm-0 text-center text-sm-start">
+          Showing 1 to 8 of 20 entries
+        </p>
+        <!-- Pagination -->
+        {% include "pagination.html" %}
+      </div>
+      <!-- Pagination END -->
+    </div>
+  </div>
+  <!-- Blog list table END -->
+</div>
+<div class="col-lg-6">
+  <!-- Blog list table START -->
+  <div class="card border bg-transparent rounded-3">
+    <!-- Card header START -->
+    <div class="card-header bg-transparent border-bottom py-3">
+      <h5 class="mb-2 mb-sm-0">Top rated author</h5>
+    </div>
+    <!-- Card header END -->
+
+    <!-- Card body START -->
+    <div class="card-body py-3">
+      <div class="table-responsive">
+        <table class="table p-4 mb-0 align-middle table-shrink">
+          <!-- Table head -->
+          <thead class="table-dark">
+            <tr>
+              <th scope="col" class="border-0 rounded-start">Author Name</th>
+              <th scope="col" class="border-0">Rating</th>
+              <th scope="col" class="border-0 rounded-end">Action</th>
+            </tr>
+          </thead>
+
+          <!-- Table body START -->
+          <tbody class="border-top-0">
+            <!-- Table item -->
+            <tr>
+              <!-- Table data -->
+              <td>
+                <div class="d-flex align-items-center position-relative">
+                  <div class="avatar avatar-xs me-2">
+                    <img
+                      class="avatar-img rounded-circle"
+                      src="{% static 'assets/images/avatar/01.jpg' %}"
+                      alt="avatar"
+                    />
+                  </div>
+                  <div>
+                    <h6 class="mb-1">
+                      <a href="#" class="stretched-link text-reset btn-link"
+                        >Lori Ferguson</a
+                      >
+                    </h6>
+                  </div>
+                </div>
+              </td>
+
+              <!-- Table data -->
+              <td>
+                <ul class="list-inline d-flex mb-0">
+                  <li class="list-inline-item me-1 small">
+                    <i class="fas fa-star text-warning"></i>
+                  </li>
+                  <li class="list-inline-item me-1 small">
+                    <i class="fas fa-star text-warning"></i>
+                  </li>
+                  <li class="list-inline-item me-1 small">
+                    <i class="fas fa-star text-warning"></i>
+                  </li>
+                  <li class="list-inline-item me-1 small">
+                    <i class="fas fa-star text-warning"></i>
+                  </li>
+                  <li class="list-inline-item me-1 small">
+                    <i class="fas fa-star text-warning"></i>
+                  </li>
+                </ul>
+              </td>
+
+              <!-- Table data -->
+              <td>
+                <div class="dropdown">
+                  <a
+                    href="#"
+                    class="btn btn-light btn-round mb-0"
+                    role="button"
+                    id="dropdownReview11"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-three-dots fa-fw"></i>
+                  </a>
+                  <!-- dropdown button -->
+                  <ul
+                    class="dropdown-menu dropdown-w-sm dropdown-menu-end min-w-auto shadow rounded"
+                    aria-labelledby="dropdownReview11"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-pencil-square fa-fw me-2"></i>Edit</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-trash fa-fw me-2"></i>Delete</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+          <!-- Table body END -->
+        </table>
+      </div>
+
+      <!-- Pagination START -->
+      <div
+        class="d-sm-flex justify-content-sm-between align-items-sm-center mt-4 mt-sm-3"
+      >
+        <!-- Content -->
+        <p class="mb-sm-0 text-center text-sm-start">
+          Showing 1 to 8 of 20 entries
+        </p>
+        <!-- Pagination -->
+        {% include "pagination.html" %}
+      </div>
+      <!-- Pagination END -->
+    </div>
+  </div>
+  <!-- Blog list table END -->
+</div>
+
+<!---->
+<div class="col-12">
+  <!-- Card START -->
+  <div class="card border">
+    <!-- Card header START -->
+    <div class="card-header border-bottom p-3">
+      <h5 class="mb-2 mb-sm-0">New requests</h5>
+    </div>
+    <!-- Card header END -->
+
+    <!-- Card body START -->
+    <div class="card-body p-3">
+      <!-- Table START -->
+      <div class="table-responsive border-0">
+        <table class="table align-middle p-4 mb-0 table-hover">
+          <!-- Table head -->
+          <thead class="table-dark">
+            <tr>
+              <th scope="col" class="border-0 rounded-start">Author name</th>
+              <th scope="col" class="border-0">Apply date</th>
+              <th scope="col" class="border-0">Location</th>
+              <th scope="col" class="border-0 rounded-end">Action</th>
+            </tr>
+          </thead>
+
+          <!-- Table body START -->
+          <tbody class="border-top-0">
+            <!-- Table row -->
+            <tr>
+              <!-- Table data -->
+              <td>
+                <div class="d-flex align-items-center position-relative">
+                  <!-- Image -->
+                  <div class="avatar avatar-md">
+                    <img
+                      src="{% static 'assets/images/avatar/04.jpg' %}"
+                      class="rounded-circle"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mb-0 ms-2">
+                    <!-- Title -->
+                    <h6 class="mb-0">
+                      <a href="#" class="stretched-link">Billy Vasquez</a>
+                    </h6>
+                  </div>
+                </div>
+              </td>
+              <!-- Table data -->
+              <td>Jan 22, 2022</td>
+              <!-- Table data -->
+              <td>United States</td>
+              <!-- Table data -->
+              <td>
+                <a
+                  href="#"
+                  class="btn btn-sm btn-success-soft me-1 mb-1 mb-lg-0"
+                  >Accept</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-sm btn-secondary-soft me-1 mb-1 mb-lg-0"
+                  >Reject</a
+                >
+                <a href="#" class="btn btn-sm btn-primary-soft me-1 mb-0"
+                  >View App</a
+                >
+              </td>
+            </tr>
+          </tbody>
+          <!-- Table body END -->
+        </table>
+      </div>
+      <!-- Table END -->
+    </div>
+    <!-- Card body END -->
+  </div>
+  <!-- Card END -->
+</div>
+
+{% endblock content %}
