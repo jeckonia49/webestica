@@ -19,24 +19,28 @@ Inner intro START -->
               <label class="form-label" for="exampleInputEmail1"
                 >Email address</label
               >
+              {% comment %}
               <input
                 type="email"
                 class="form-control"
                 id="exampleInputEmail1"
                 placeholder="E-mail"
               />
+              {% endcomment %} {{form.email}}
             </div>
             <!-- Password -->
             <div class="mb-3">
               <label class="form-label" for="exampleInputPassword1"
                 >Password</label
               >
+              {% comment %}
               <input
                 type="password"
                 class="form-control"
                 id="exampleInputPassword1"
                 placeholder="*********"
               />
+              {% endcomment %}{{form.password}}
             </div>
             <!-- Checkbox -->
             <div class="mb-3 form-check">
